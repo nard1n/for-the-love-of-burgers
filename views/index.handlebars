@@ -1,0 +1,22 @@
+{{!-- Setup the main.handlebars file so it's able to be used by Handlebars.
+
+Setup the index.handlebars to have the template that Handlebars can render onto.
+
+Create a button in index.handlebars that will submit the user input into the database --}}
+
+<style media="screen">
+    li {
+        font-family: sans-serif;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 75%;
+    }
+</style>
+
+<h1>My favorite Burgers : ?{{ burger_name }}</h1>
+
+<ul>
+    {{#each burgers_db}}
+        <li>{{burgers}}</li>
+    {{/each}}
+</ul>
