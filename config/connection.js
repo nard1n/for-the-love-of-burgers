@@ -10,8 +10,11 @@ const connection = mysql.createConnection({
 });
 
 connection.connect((err) => {
-    if(err) throw err;
-    console.log('Connected to mysql!');
+    if(err) {
+        console.log(`error connecting: ${err.stack}`);
+        return;
+    }
+    console.log(`connected as id ${connection.threadId}`);
 });
 
-module.export = connection; //Export the connection.
+module.exports = connection; //Export the connection for ORM

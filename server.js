@@ -1,23 +1,25 @@
-
 // Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
+const routes = require("./controllers/burgersController.js")
 
 // Sets up express app
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+// use express.static middleware to serve static content from the 'public' dir
+app.use(express.static('public'));
+
+//set express app to handle data parsing
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
+
 //set handlevars as the default templating engine
-app.engine('handlebards', exphbs({ defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-//Data
-//? const burgers = [{burger: 'baja'}, {burger: 'classic'}];
-
-//Routes
-app.get("/burgers", function (req, res) {
- //   res.render('index', burgers[0]);
-});
+//Give server access to routes
+app.use(routes);
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);

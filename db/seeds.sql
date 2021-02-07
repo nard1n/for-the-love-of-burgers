@@ -4,8 +4,8 @@ USE burgers_db;
 INSERT INTO burgers (burger_name, devoured)
 VALUES ("Classic", 1);
 
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Baja", 0);
+INSERT INTO burgers (burger_name)
+VALUES ("Baja");
 
-INSERT INTO burgers (burger_name, devoured)
-VALUES ("Impossible", 0);
+INSERT INTO burgers (burger_name)
+VALUES ("Impossible");
