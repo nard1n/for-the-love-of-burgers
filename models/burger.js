@@ -12,7 +12,7 @@ const burger = {
     
     update(objColVals, condition, cb) {
         orm.update('burgers', objColVals, condition, (res) => cb(res));
-    }
+    },
 };
 
 // Export at the end of the burger.js file.

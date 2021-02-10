@@ -23,7 +23,7 @@ Create a button in index.handlebars that will submit the user input into the dat
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                {{>burgers-list devoured=true}}
+                {{>burgers-list devoured=false}}
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -34,7 +34,7 @@ Create a button in index.handlebars that will submit the user input into the dat
                 {{#each burgers}}
                 {{#if devoured}}
                 <del>
-                {{>burgers-list devoured=false}}
+                {{>burgers-list devoured=true}}
                 </del>
                 {{/if}}
                 {{/each}}
