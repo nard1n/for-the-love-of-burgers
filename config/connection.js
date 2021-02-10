@@ -1,9 +1,9 @@
 //the code to connect Node to MySQL.
 const mysql = require("mysql");
 
-const connection;
+let connection;
 
-if ( process.env.JAWSDB_URL) {
+if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
@@ -24,4 +24,5 @@ connection.connect((err) => {
     console.log(`connected as id ${connection.threadId}`);
 });
 
-module.exports = connection; //Export the connection for ORM
+//Export the connection for ORM
+module.exports = connection; 
