@@ -6,7 +6,7 @@
 For The Love of Burgers is a restaurant app that lets users input the names of burgers they'd like to eat. This application is a burger logger built with MySQL, Node, Express, Handlebars and a homemade ORM, following an MVC design pattern.
 
 Screenshot of application:
-![Screenshot](./public/assets/screenshot.png)
+![Screenshot](./public/Assets/screenshot.png)
 
 Deployed app is deployed to Heroku, [here](https://aqueous-scrubland-45192.herokuapp.com/)
 
